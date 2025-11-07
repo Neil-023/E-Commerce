@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+.analytics-body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #F4ECDF;
+  display: flex;
+  flex-direction: column;
+}
+
+.analytics-title {
+  font-size: 35px;
+  margin-top: 12vh;
+  margin-left: 6vw;
+}
+
+.analytics-container {
+  display: flex;
+  flex-direction: row;
+
+  /* border: 4px solid black; */
+  width: 87%;
+  height: 70%;
+  margin-left: 6vw;
+}
+
+.analytics-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 65%;
+  height: 100%;
+}
+
+.analytics-graph {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+
+.analytics-stats {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+
+/* card wrapper */
+.card {
+  background: #f9f4eb;
+  border-radius: 1rem;
+  padding: 1rem;
+  padding-top: 0;
+  width: 510px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: sans-serif;
+  border: #c47b08 1px solid;
+}
+
+/* title */
+.card__title {
+  margin-bottom: 0.1rem;
+  font-size: 1.25rem;
+  color: #3b3026;
+}
+
+/* donut container to position center text */
+.donut-container {
+  position: relative;
+  width: 150px;
+  /* chart diameter */
+  height: 250px;
+  margin: 0 auto 1.5rem;
+}
+
+/* the donut itself */
+.donut-chart {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /* adjust these percentages & colors as needed */
+  background: conic-gradient(#c47b08 0% 30%,
+      #ffb52e 30% 60%,
+      #ffd182 60% 80%,
+      #ffe6a7 80% 100%);
+  position: relative;
+}
+
+/* ensure Chart.js canvas fills the .donut-chart box */
+.donut-chart canvas {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* if you want to hide the CSS conic‑gradient fallback once Chart.js renders */
+.donut-chart {
+  background: none;
+}
+
+
+/* cut‑out center to make it a donut */
+.donut-chart::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+  background: #f9f4eb;
+  border-radius: 50%;
+}
+
+/* number in the center */
+/* number in the center */
+.donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* <-- reliably centers */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3b3026;
+  pointer-events: none;
+  z-index: 5;
+  /* ensure it's above the Chart.js canvas */
+  width: auto;
+  text-align: center;
+  padding: 0;
+}
+
+
+/* legend as two‑column grid */
+.legend {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  color: #7a6a57;
+}
+
+/* each legend line */
+.legend__item {
+  display: flex;
+  align-items: center;
+}
+
+/* the colored dot */
+.legend__dot {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+/* dot colors */
+.dot--1 {
+  background: #c47b08;
+}
+
+.dot--2 {
+  background: #ffb52e;
+}
+
+.dot--3 {
+  background: #ffd182;
+}
+
+.dot--4 {
+  background: #ffe6a7;
+}
+
+
+.icon-circle {
+  width: 6rem;
+  height: 6rem;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  fill: none;
+  stroke: #c47b08;
+  /* amber‑700 */
+  stroke-width: 2;
+}
+
+.value {
+  font-size: 2.5rem;
+  /* ~5xl */
+  font-weight: 800;
+  color: #3b3026;
+  /* dark brown */
+  margin: 0;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  color: #7a6a57;
+  /* gray‑600 */
+  font-size: 1rem;
+}
+
+.icon-circle .material-symbols-outlined {
+  font-size: 4rem;
+  color: #c47b08;
+  /* amber‑700 */
+}
+
+.order-history {
+  /* border: 5px solid gray; */
+  display: flex;
+  width: 35%;
+  height: 100%;
+  line-height: 2;
+}
+
+.orders-card {
+  background: #f9f4eb;
+  border-radius: 1rem;
+
+  width: 90%;
+  height: 93.5%;
+  border: #c47b08 1px solid;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+.orders-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1.5vw;
+  /* border: 4px solid black; */
+  width: 13vw;
+}
+
+.orders-card__header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3b3026;
+}
+
+.icon-clock {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: #7a6a57;
+  stroke-width: 2;
+}
+
+.orders-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 1.5rem 2rem 1.5rem;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  height: 8vh;
+  border-radius: 15px;
+  padding: 0.75rem 1.7rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.order-text {
+  flex: 1;
+}
+
+.order-title {
+  margin: 0;
+  font-weight: 800;
+  color: #3b3026;
+}
+
+.order-sub {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  color: #7a6a57;
+}
+
+.order-img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 9999px;
+  object-fit: cover;
+  margin-left: 1rem;
+}
+
+.order-action {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: none;
+  stroke: #7a6a57;
+  stroke-width: 2;
+  margin-left: 1rem;
+}
+
+.orders-card__footer {
+  text-align: center;
+}
+
+.orders-card__footer a {
+  font-size: 0.875rem;
+  color: #c47b08;
+  text-decoration: none;
+}
+
+.orders-card__footer a:hover {
+  text-decoration: underline;
+}
+
+.top-customer-spent {
+  font-size: 45px;
+  font-weight: 800;
+  line-height: 0;
+}
+
+.title3 {
+  line-height: 0;
+}

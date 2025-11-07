@@ -1,0 +1,317 @@
+.add-product-page {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f4ecdf;
+}
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vw;
+    margin-top: 2vh;
+}
+
+.add-product-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 5vw;
+    margin-top: 10vh;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 5vw;
+}
+
+.category-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5vw;
+    margin-top: 2vh;
+    gap: 2vw;
+}
+
+.category-container .category-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 9vw;
+    height: 11vh;
+    border: 2px solid #B8B1A6;
+    background-color: #F8F4ED;;
+    cursor: pointer;
+    border-radius: 15px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #9E978C;
+}
+
+.category-container .category-btn:hover {
+   background-color: #FFF8EB;
+   color: #BCA888;
+   border: 2px solid #B8B1A6;
+}
+
+.category-container .category-btn .material-symbols-outlined {
+    font-size: 35px;
+    color: #9E978C;
+}
+
+.category-container .category-btn.selected {
+    background-color: #FFEED3;
+    color: #CF8917;
+    border: 3px solid #CF8917;
+}
+
+.category-container .category-btn.selected .material-symbols-outlined {
+    color: #CF8917;
+}
+
+.details-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 5vw;
+    margin-top: 4vh;
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
+    margin-top: 2vh;
+    gap: 2vh;
+    border: 2px solid #cbd5e1;
+    background-color: #F9F6F0;
+    border-radius: 10px;
+    box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.2);
+    height: 35vh;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    margin-left: 2vw;
+}
+
+.container1 {
+    margin-top: 3vh;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vh;
+}
+
+.input-container label{
+    font-weight: 800;
+}
+.stock-field{
+    margin-left: -2vw;
+}
+.input-label {
+    margin-bottom: 0.5vh;
+    font-weight: 500;
+    font-size: 1rem;
+
+    color: #334155;
+    /* Optional darker color */
+}
+
+.input-field {
+    padding: 1vh 1vw;
+    border-radius: 10px;
+    border: 2px solid #B8B1A6;
+    outline: none;
+    font-size: 1rem;
+    background-color: #F8F4ED;
+    width: 20vw;
+    height: 4vh;
+}
+
+.input-field2 {
+    padding: 1vh 1vw;
+    border-radius: 10px;
+    border: 2px solid #B8B1A6;
+    outline: none;
+    font-size: 1rem;
+    background-color: #F8F4ED;
+    width: 96%;
+    height: 4vh;
+}
+
+.description-field {
+    min-height: 4vh;
+    resize: none;
+    width: 20vw;
+}
+
+.image-container {
+    width: 27vw;
+    height: 57.5vh;
+    border: 2px solid #B8B1A6;
+    background-color: #F9F6F0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 27vh;
+    margin-left: 4vw;
+    box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container2{
+    width: 400px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 4px dashed #B8B1A6;
+    background-color: #F8F4ED;
+    color: #9E978C;
+    margin-top: 5vh;
+    border-radius: 10px;
+}
+
+.upload-placeholder {
+    text-align: center;
+    color: #9E978C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-placeholder .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-size: 100px;
+    color: #9E978C;
+    font-variation-settings: 
+    'FILL' 0, 
+    'wght' 200, 
+    'GRAD' 0, 
+    'opsz' 48 !important    ; 
+}
+
+.uploaded-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    gap: 15px;
+    margin-bottom: 5vh;
+}
+
+.button-container button{
+    width: 20vw;
+    height: 5vh;
+    background-color: #CF8917;
+    border: 1px solid #64748b;
+    color: white;
+    border: 1px solid #B8B1A6;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+}
+
+.cancel-btn{
+    background-color: #F7EBD2 !important;
+    border: none !important;
+    color: #CE8917 !important;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; 
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    z-index: 1001; 
+    width: 30vw;
+    height: 70vh;
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 across */
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .icon-option {
+    background: #F8F4ED;
+    border: 2px solid #B8B1A6;
+    border-radius: 8px;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+  }
+  
+  .icon-option.selected {
+    background: #FFEED3;
+    border-color: #CF8917;
+    color: #CF8917;
+  }
+  
+  .icon-option .material-symbols-outlined {
+    font-size: 34px;
+    color: inherit;
+  }
+
+  .cat-name{
+    width: 28vw !important;
+  }
+  
+  .add-product-btn{
+    width: 20vw;
+    height: 5vh;
+    background-color: #CF8917;
+    border: 1px solid #64748b;
+    color: white;
+    border: 1px solid #B8B1A6;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+  }
+
+  .cancel-btn{
+    width: 20vw;
+    height: 5vh;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }

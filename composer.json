@@ -1,0 +1,5 @@
+{
+    "require": {
+        "illuminate/routing": "^12.10"
+    }
+}

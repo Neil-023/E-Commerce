@@ -1,0 +1,186 @@
+.myproduct-body{
+    background-color: #F4ECDF;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow-x: auto;
+}
+
+.myproduct-container{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    width: 80%;
+    height: 80%;
+    margin-left: 10vw;
+    margin-top: 15vh;
+}
+
+.myproduct-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 4vh;
+}
+
+.myproduct-contents{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 4 equal columns */
+    gap: 1vw;                               /* space between cards */
+    padding: 1vw;
+    box-sizing: border-box;
+}
+
+.addproduct-btn{
+    background-color: #CF8917;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    width: 12vw;
+    height: 6vh;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cart-card2 {
+    margin-top: 10vh;
+    position: relative;
+    overflow: visible; 
+    height: 500px;      
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    justify-content: center;
+    box-shadow: -5px 6px 8px rgba(0, 0, 0, 0.2);
+    align-items: flex-end;
+    line-height: 1;
+    background-color: #F9F6F0;
+    border: 1px solid #CF8917;
+    border-radius: 45px;
+    margin-bottom: 5vh;
+  }
+  
+
+  /* you can remove any width/flex rules from .cart-card */
+ 
+  
+  .cart-card2 > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 7vh;
+    margin-bottom: 12vh;
+  }
+  
+  .product-date{
+    /* border: 1px solid black; */
+    height: 7vh;
+    width: 15vw !important;
+    display: flex;
+    margin-left: -1vw;
+    margin-top: 2vh;
+    flex-direction: row !important;
+    justify-content: space-between;
+  }
+
+  .cart-card2 img {
+    position: absolute;
+    top: -30%; 
+    left: -18%;
+    width: 550px; 
+    height: auto;
+    
+  }
+  
+  .cart-pizza-name2{
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 0;
+    margin-bottom: 5px;
+  }
+
+  .cart-card-info2{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    width: 12.5vw;
+    line-height: 0;
+  }
+
+  .cart-card-info2 > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .stock-counter{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 3vh;
+  }
+
+  .stock-counter button{
+    border: none;
+    background-color: #F4ECDF;
+    border: 1px solid #CF8917;
+    width: 2vw;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+  }
+
+  .price-div{
+    line-height: 0;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    height: 7vh;
+  }
+
+  .line{
+    position: absolute;
+    width: 90% !important;
+    height: 1px;
+    background-color: #CF8917;
+    bottom: 22%;
+    left: 5%;
+  }
+
+  .cart-header2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+  }
+
+
+
+  .product-date div{
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .removeproduct-btn {
+    margin-top: 0.5rem;
+    background: #e53e3e;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 100%;
+    width: 4vw;
+    height: 8vw !important;
+    cursor: pointer;
+  }
+  .removeproduct-btn:hover {
+    background: #c53030;
+  }
+  
